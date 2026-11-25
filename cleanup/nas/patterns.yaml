@@ -22,7 +22,8 @@ rootdir:
         # Major releases(morpheus or totoro) have longer runway.
         # 365 days is enough for this requirment
         # All other installers everywhere for 90 days
-        ".*enterprise.*linux.*.deb": 365
+        "^(?!.*-gpu-).*enterprise.*linux.*.deb": 365
+        ".*-gpu-.*": 90
         "^(?!.*enterprise.*linux.*.deb).*(deb|rpm|dmg|msi)": 90
         # All debug files other than *.deb
         "^(?!.*enterprise.*linux.*.deb).*(debug|dbg).*": 60
